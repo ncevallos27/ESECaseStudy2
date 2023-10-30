@@ -15,9 +15,9 @@ percentInfectDie = 0.01;
 percentRecoverLoseImmunity = 0;
 percentRecoverKeepImmunity = 1;
 
-runTime = 1000; %in days
+runTime = 200; % in days
 
-%constructing the matrix
+% constructing the matrix
 S_column = [percentNotInfect percentInfect 0 otherDeathPercent]';
 I_column = [percentRecoverNoImmunity percentStayInfected percentRecoverImmunity percentInfectDie]';
 R_column = [percentRecoverLoseImmunity 0 percentRecoverKeepImmunity 0]';
@@ -40,8 +40,8 @@ ylabel("Percentantage of People")
 xlabel("Number of Days")
 
 
-%code for re-infections, this will be a similar graph to the text book as
-%well
+% code for re-infections, this will be a similar graph to the text book as
+% well
 percentRecoverNoImmunity = 0.04;
 percentStayInfected = 0.85;
 percentRecoverImmunity = 0.1;
@@ -68,7 +68,7 @@ title("SIRD model re-infections possible")
 ylabel("Percentantage of People")
 xlabel("Number of Days")
 
-%running the included lsim function and comparing with reinfections
-%possible to compare to homemade function
+% running the included lsim function and comparing with reinfections
+% possible to compare to homemade function
 figure
 base_sir
